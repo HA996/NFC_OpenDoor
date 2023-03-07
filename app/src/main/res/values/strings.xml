@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NFC_OpenDoor</string>
+    <string name="ConnectError">Không kết nối được dữ liệu!!! Kiểm tra lại dường truyền</string>
+    <string name="Wellcome">Chào Mừng!!!</string>
+    <string name="NotActiveCard">Thẻ chưa Kích Hoạt!!!</string>
+    <string name="LockedCard">Thẻ đã bị Khóa!!!</string>
+    <string name="CardDelete">Thẻ Không Tồn Tại!!!</string>
+    <string name="ActiveDoor">Cổng Đang Mở!!!</string>
+    <string name="ActiveDoor2">Cổng Đang Đóng!!!</string>
+    <string name="ActiveRDoor1">Cửa Quấn Đang Mở!!!</string>
+</resources>

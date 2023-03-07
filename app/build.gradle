@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
+    }
+
+    packagingOptions {
+        resources.excludes.add('index-all.html')
+        resources.excludes.add('README.md')
+        resources.excludes.add('index.html')
+        resources.excludes.add('META-INF/DEPENDENCIES')
+    }
+
+    defaultConfig {
+        applicationId "com.example.nfc_opendoor"
+        minSdk 22
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation 'net.sourceforge.jtds:jtds:1.3.1'
+    implementation 'org.apache.mina:mina-core:3.0.0-M2'
+    implementation 'org.apache.sshd:sshd-core:2.1.0'
+    implementation 'org.apache.sshd:sshd-putty:2.1.0'
+    implementation 'org.apache.sshd:sshd-common:2.1.0'
+    implementation 'org.slf4j:slf4j-api:1.7.5'
+    implementation 'org.slf4j:slf4j-simple:1.6.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
